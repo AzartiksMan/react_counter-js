@@ -13,11 +13,9 @@ export const App = () => {
   };
 
   const increase = () => {
-    addOne();
-
-    if (count % 5 === 0) {
-      add100();
-    }
+    setCount(currentCount => {
+      return currentCount % 5 === 0 ? currentCount + 101 : currentCount + 1;
+    });
   };
 
   return (
